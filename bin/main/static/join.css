@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.wrap {
+    min-width: 1200px;
+    margin: 0px auto;
+}
+
+.font {
+    margin : 12px;
+    width: 150px;
+    color: blueviolet;
+}
+
+.check_button {
+    text-decoration: none;
+    border: none;
+    margin : 10px;
+    font-size: 14px;
+    background-color: #ffa07a;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+.id_ok{
+    color:#008000;
+    display: none;
+    }
+    
+    .id_already{
+    color:#6A82FB; 
+    display: none;
+    }
