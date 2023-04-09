@@ -1,3 +1,7 @@
+//회원가입 버튼 클릭 시 입력된 정보가 비어있는지 확인
+
+
+
 //회원가입
 var join = function (user_type, user_id, user_pw, user_name, user_phone, address1, address2) {
     var data = {
