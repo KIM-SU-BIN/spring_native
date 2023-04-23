@@ -1,6 +1,27 @@
 @charset "UTF-8";
 
 ._sm2 input {
-    width:200px;
-    border:1px solid #001100
+    width: 200px;
+    border: 1px solid #001100;
+}
+
+#user_id, #user_pw {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#btn_login, #btn_join {
+    width: 80px;
+    height: auto;
+    margin: 15px 5px 15px 25px;
+    border-radius: 3px;
+}
+
+/* 개인,기업 선택 div */
+.check_user_type {
+    font-size: 12px;
+}
+
+.check_user_type input {
+    margin: 5px;
 }

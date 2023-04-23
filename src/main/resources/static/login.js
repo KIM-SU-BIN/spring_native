@@ -15,7 +15,7 @@ var log_in = function (id, pw) {
                 return;
             }
 
-            alert("Log in success");
+            //alert("Log in success");
             window.location.href = "/";
         },
         error: function (request, status, error) {
@@ -34,14 +34,13 @@ $("#btn_login").click(function () {
 
 
 $(document).ready(function () {
-    alert("$(document).ready()");
+    //alert("$(document).ready()");
     //...
 });
 
 
 //join 넘어가기
 $("#btn_join").click(function () {
-    alert("success");
     window.location.href = "/join";
 });
 

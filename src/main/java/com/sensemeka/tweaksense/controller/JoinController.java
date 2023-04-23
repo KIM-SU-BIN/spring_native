@@ -18,6 +18,6 @@ public class JoinController {
         System.out.println("JoinController>join");
 
         return "/join";
-    }
+    }}
 
-}
+

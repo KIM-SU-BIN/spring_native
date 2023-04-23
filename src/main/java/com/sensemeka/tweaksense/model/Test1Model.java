@@ -1,21 +1,20 @@
 package com.sensemeka .tweaksense.model;
 
+import java.util.List;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-
-import com.sensemeka .tweaksense.*;
+import com.sensemeka.tweaksense.DbManager;
+import com.sensemeka.tweaksense.ErrorCode;
 
 public class Test1Model {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	private DbManager db;
 
 	public Test1Model(DbManager db) {
-		this.db = db;
+		this.db = db;s
 	}
 
 	public int getData(List<Map<String, String>> dst, String strId) {

@@ -11,11 +11,9 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sensemeka.tweaksense.DbManager;
@@ -84,8 +82,6 @@ public class AccountController {
 		return map;
 	}
 
-	// sign up / register
-
 	// 회원가입 실행
 	@RequestMapping(value = "/save.do", method = { RequestMethod.GET, RequestMethod.POST })
 	public Map<String, Object> save(HttpServletRequest request, HttpServletResponse response,
@@ -145,7 +141,7 @@ public class AccountController {
 	@RequestMapping(value = "/checkDuplicateId.do", method = RequestMethod.POST)
 	public Map<String, Object> checkDuplicateId(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam Map<String, String> body) {
-		logger.info("req: /api/checkDuplicateId.do");
+		logger.info("req:/api/checkDuplicateId.do");
 
 		int nErrorCode = ErrorCode.NO_ERROR;
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -160,8 +156,6 @@ public class AccountController {
 		AccountModel checkDuplicateIdModel = new AccountModel(new DbManager(dataSource));
 		nErrorCode = checkDuplicateIdModel.checkDuplicateId(data, strUserId);
 
-		map.put("errCode", nErrorCode);
-
 		if (data.size() <= 0) {
 			map.put("errCode", nErrorCode);
 			return map;
@@ -169,6 +163,24 @@ public class AccountController {
 		return map;
 	}
 
+	// 카카오톡 로그인/회원가입
+	// private kakao_api kakao_api = new kakao_api();
+
+	@RequestMapping(value = "/checkId.do", method = RequestMethod.POST)
+	public String kakao(@RequestParam Map<String, String> body) {
+		System.out.println("AccountController > access_token");
+		logger.info("req:/api/checkId.do");
+
+		return "/";
+	}
+
+	@RequestMapping(value = "/kakaoSignUp.do", method = RequestMethod.POST)
+	public String kakaoLogin(@RequestParam Map<String, String> body) {
+		System.out.println("AccountController > kakaoLogin_access");
+		logger.info("req:/api/kakaoSignUp.do");
+
+		return "/";
+	}
 	// reset password
 	// search account
 	// ...

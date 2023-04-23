@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.wrap {
+    min-width: 1200px;
+    max-height: 1200px;
+    height: auto;
+    margin: 0px auto;
+    background-color: rgb(231, 208, 225);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(175, 120, 161);
+}
+
+
+/* 푸터 스타일 */
+.footer {
+    text-align: center;
+    min-width: 1200px;
+    position: relative;
+    justify-content: space-between;
+    line-height: 10px;
+    /*줄 높이 설정값*/
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(175, 120, 161);
+}
+
+.footer-text {
+    padding: 20px 15px 0px 15px;
+}
+
+#footer-Copyright {
+    display: block;
+    line-height: 18px;    /*줄 높이 설정값*/
+    margin-top: 20px;
+    padding: 5px 0px 20px 15px;
+}
+
+.common-hr1 {
+    border: 0;
+    height: 1px;
+    width: 99%;
+    background-color: rgb(123, 118, 118);
+}
+
+/* 푸터 버튼 */
+.footer-btn {
+    padding: 0px 9px;
+    text-align: center;
+}
+
+#footerbtn {
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0px 9px;
+    font-size: 12px;
+    color: rgb(229, 229, 229);
+    background-color: rgb(81, 81, 81);
+}
+
+#footerbtn:hover {
+    background-color: #d4bef7;
+}
